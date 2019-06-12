@@ -1,3 +1,24 @@
-<p>
-  user-list works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">
+      User
+      </h6>
+      <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let user of userList">
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+              <i class="fas fa-trash-alt"></i>
+          </a>
+          
+        </tr>
+      </tbody>
+
+    </table>
+
+  
+
+  </div>
+</div>
