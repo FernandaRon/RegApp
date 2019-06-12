@@ -27,4 +27,9 @@ userList: User[];
     })
   }
 
+  onDelete($key: string)
+  {
+    this.userService.removeUser($key);
+  }
+
 }
