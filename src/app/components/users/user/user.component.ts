@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+//services
+import { UserService } from '../../../services/user.service';
+import { NgForm } from '@angular/forms';
+
+import { User } from 'src/app/models/user';
+
+
+
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -7,9 +16,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService : UserService ) { }
 
   ngOnInit() {
+    this.userService.getUsers();
+    this.resetForm()
+  }
+
+onSubmit(userForm: NgForm)
+{
+ this.userService.insertUser(userForm.value);
+ this.resetForm();
+}
+
+  resetForm(userForm?: NgForm)
+  {
+    if(userForm != null)
+    userForm.reset();
+    this.userService.selectedUser = new User;
   }
 
 }

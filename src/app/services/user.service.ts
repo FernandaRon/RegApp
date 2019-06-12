@@ -15,7 +15,7 @@ export class UserService {
 
   getUsers()
   {
-    return this.usersList = this.firebase.list('users');
+    return this.usersList = this.firebase.list('user');
   } 
 
   insertUser(user: User) 
