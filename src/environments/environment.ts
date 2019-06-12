@@ -4,6 +4,16 @@
 
 export const environment = {
   production: false
+  //set the conection with firebase
+  firebase: {
+    apiKey: "AIzaSyAenUG3mCZiN2R8xqAS0sI4PyKCyNDWJSI",
+    authDomain: "registrationuser-2e422.firebaseapp.com",
+    databaseURL: "https://registrationuser-2e422.firebaseio.com",
+    projectId: "registrationuser-2e422",
+    storageBucket: "",
+    messagingSenderId: "253034288140",
+    appId: "1:253034288140:web:a9b251eda18356c9"
+  }
 };
 
 /*
